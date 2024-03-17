@@ -1,5 +1,5 @@
 export GITHUB_TOKEN=your_token
-followers=$(curl -H "Authorization: Bearer $GITHUB_TOKEN" -s "https://api.github.com/users/Minutrade/followers?per_page=100" | jq -r '.[].login')
+followers=$(curl -H "Authorization: Bearer $GITHUB_TOKEN" -s "https://api.github.com/users/EMPRESA/followers?per_page=100" | jq -r '.[].login')
 
 for follower in $followers; do
   echo "Clonando repositórios do usuário $follower"
