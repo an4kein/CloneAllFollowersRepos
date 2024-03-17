@@ -20,3 +20,8 @@ Após o download de todos os repositórios de cada seguidor, é possível realiz
 ```
 find /home/EduardoBarbosa/recon/EMPRESA/seguidores/ -maxdepth 1 -type d \( ! -name . \) -exec sh -c 'trufflehog filesystem --json "$1" > "/home/EduardoBarbosa/recon/EMPRESA/results-seguidores/$(basename "$1").json"' _ {} \;
 ```
+#GITLEAKS
+
+```
+find /home/EduardoBarbosa/recon/EMPRESA/seguidores/* -name .git -type d | while read gitdir; do repo=$(basename "$(dirname "$gitdir")"); user=$(basename "$(dirname "$(dirname "$gitdir")")"); echo "User: $user, Repo: $repo" >> "/home/EduardoBarbosa/recon/EMPRESA/logs/unified_gitleaks.log"; gitleaks detect --source="$(dirname "$gitdir")" --verbose >> "/home/EduardoBarbosa/recon/EMPRESA/logs/unified_gitleaks.log"; echo "------" >> "/home/EduardoBarbosa/recon/EMPRESA/logs/unified_gitleaks.log"; done
+```
