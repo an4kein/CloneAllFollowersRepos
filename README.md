@@ -7,7 +7,9 @@ Profissionais de segurança cibernética e equipes de Red Team, a excelência em
 Por que essa ferramenta é crucial?
 
 📊 Análise Competitiva: Descubra práticas de codificação e frameworks em uso, destacando possíveis vetores de ataque.
+
 🔎 Identificação de Riscos: Localize repositórios com configurações vulneráveis e chaves expostas que podem comprometer a segurança.
+
 👥 Perfil de Desenvolvimento: Entenda como os desenvolvedores interagem com a sua organização e trace perfis de risco de segurança.
 
 Utilize CloneAllFollowersRepos para transformar dados em decisões estratégicas e proteja sua empresa com inteligência e eficiência.
